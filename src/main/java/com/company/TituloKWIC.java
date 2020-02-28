@@ -12,7 +12,7 @@ public class TituloKWIC implements Comparable<TituloKWIC>, Token {
 
     //constructor
     public TituloKWIC(String t){
-     if ((!t.equals(" ")) && (!t.equals(","))&& !(t.equals(";")))
+     if ((!t.equals(" ")) && (!t.equals(","))&& !(t.equals(";"))&& (!t.equals("")))
         titulo = t.toUpperCase();
      else
          throw new KWICException("no es una cadena de caracteres valida");
