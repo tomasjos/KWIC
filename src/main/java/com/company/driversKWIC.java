@@ -3,7 +3,7 @@ package com.company;
 public class driversKWIC {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         //palnosig es la lista de palabras no significativas, es decir, aquellas que no serán elementos del índice
         String palNoSig = "el,la,los,las,al,un,una,unos,unas,y,o,a,ante,bajo,cabe,de,desde,en,entre,hacia,hasta,para,por,sin,si,no";
         //frases es la lista de strings que corresponden a titulos de peliculas

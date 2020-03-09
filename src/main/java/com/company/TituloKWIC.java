@@ -12,7 +12,7 @@ public class TituloKWIC implements Comparable<TituloKWIC>, Token {
 
     //constructor
     public TituloKWIC(String t){
-     if ((!t.equals(" ")) && (!t.equals(","))&& !(t.equals(";"))&& (!t.equals("")))
+     if ((!t.equals(" ")) && (!t.equals(","))&& !(t.equals(";")))
         titulo = t.toUpperCase();
      else
          throw new KWICException("no es una cadena de caracteres valida");
@@ -28,7 +28,7 @@ public class TituloKWIC implements Comparable<TituloKWIC>, Token {
     //gettitulo nos devuelve el valor del atributo titulo
     public String getTitulo()
     {
-        return this.titulo;
+        return this.titulo.toUpperCase();
     }
     /**
      * Como vamos a tener estructuras TreeMap y TreeSet, necesitamos redefinir

@@ -4,10 +4,10 @@ package com.company;
 public class KWICException extends RuntimeException {
 
     public KWICException(){
-        super("error");
+        super("Error. ");
     }
 
     public KWICException(String msg){
-        super("error"+msg);
+        super("Error. "+msg);
     }
 }
