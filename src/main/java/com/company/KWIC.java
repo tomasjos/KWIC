@@ -6,18 +6,18 @@ import java.util.StringTokenizer;
 import java.util.TreeMap;
 import java.util.TreeSet;
 public class KWIC {
-/**
- * estructura del KWIC.
- * Necesito un conjunto para guardar las palabras no claves, estas serán:
- * el, la , los , las ..... las que aparecen en el driver, son las que
- * carecen de significado.El conjunto será de TituloKWIC, para que no distinga
- * entre eL y El
- *
- * Luego tendremos para generar las frases una estructura Map, donde por cada
- * palabra con significado, que será nuestro índice, habrá un conjunto de frases.
- * Estas frases relacionadas con el índice, serán aquellas frases en las que
- * aparezca la palabra índice.
- */
+    /**
+     * estructura del KWIC.
+     * Necesito un conjunto para guardar las palabras no claves, estas serán:
+     * el, la , los , las ..... las que aparecen en el driver, son las que
+     * carecen de significado.El conjunto será de TituloKWIC, para que no distinga
+     * entre eL y El
+     *
+     * Luego tendremos para generar las frases una estructura Map, donde por cada
+     * palabra con significado, que será nuestro índice, habrá un conjunto de frases.
+     * Estas frases relacionadas con el índice, serán aquellas frases en las que
+     * aparezca la palabra índice.
+     */
     private Set<TituloKWIC> noClaves = new TreeSet<TituloKWIC>();
     private Map<TituloKWIC,Set<String>> glosario = new TreeMap<TituloKWIC, Set<String>>();
 
@@ -134,15 +134,12 @@ public class KWIC {
 
     //----------------------------------------------------------------------------
     /**
-
      utilizaremos dos métodos privados:
      imprimirNoClaves() --> para imprimir por pantalla el conjunto
      de claves.
-
      imprimirGlosario() --> para imprimir por pantalla la estructura Map,
      clave (índice) y valor (conjunto de frases relacionadas
      y con el índice sustituido por ...)
-
      */
     public String toString(){
         String cadFinal = "";
@@ -164,7 +161,7 @@ public class KWIC {
 //        utilizo el iterador de conjuntos para recorrerlo e imprimirlo
 
         for (TituloKWIC noClave : this.noClaves) {//mientras halla elementos en el conjunto
-            cadNoClaves = cadNoClaves.concat(noClave.toString() + ", ");//imprime elementos
+            cadNoClaves = cadNoClaves.concat(noClave.getTitulo() + ", ");//imprime elementos
         }
         return cadNoClaves;
     }
